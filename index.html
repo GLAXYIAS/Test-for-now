@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Drive - Google Drive</title>
+  <style>
+    body { font-family: Arial; margin: 0; padding: 10px; background: #111; color: #fff; }
+    #controls { margin-bottom: 10px; }
+    input { width: 70%; padding: 10px; }
+    button { padding: 10px 15px; margin: 5px; cursor: pointer; }
+    #frame { width: 100%; height: 85vh; border: none; background: #000; }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <input id="url" placeholder="Enter URL (e.g. https://youtube.com)" type="text">
+    <button onclick="proxyGo()">Go</button>
+    <button id="deploy" style="background: lime; color: black;">Deploy Direct Link</button>
+  </div>
+  <iframe id="frame" src="about:blank"></iframe>
 
+  <script>
+    const frame = document.getElementById('frame');
+    const input = document.getElementById('url');
+
+    async function proxyGo() {
+      let url = input.value.trim();
+      if (!url) return;
+      if (!url.startsWith('http')) url = 'https://' + url;
+
+      // Basic client-side proxy via rewriting fetch + service worker (register below)
+      // For now, load via data URL or direct — we'll upgrade
+      frame.src = '/proxy/' + b64EncodeUnicode(url);  // Prefix we'll handle in SW
+    }
+
+    // Simple base64 encoder for URL
+    function b64EncodeUnicode(str) {
+      return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) => String.fromCharCode('0x' + p1)));
+    }
+
+    // Deploy button: copies current proxied URL
+    document.getElementById('deploy').onclick = () => {
+      if (frame.src && frame.src !== 'about:blank') {
+        navigator.clipboard.writeText(frame.src).then(() => {
+          alert('Link copied! Open it directly — it should load the proxied site.');
+        }).catch(() => alert('Copy failed — select and copy manually: ' + frame.src));
+      } else {
+        alert('Load a site first!');
+      }
+    };
+
+    // Register service worker for rewriting
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(reg => {
+        console.log('SW registered', reg);
+      }).catch(err => console.error('SW failed', err));
+    }
+  </script>
+</body>
+</html>
