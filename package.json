@@ -1,1 +1,12 @@
-
+{
+  "name": "My Drive - Google Drive",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@tomphttp/bare-server-node": "^2.0.0",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.0"   // or latest version
+  }
+}
