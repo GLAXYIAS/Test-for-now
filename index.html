@@ -18,7 +18,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 <style>
+.cloak-wrapper{
+position:relative;
+display:inline-block;
+}
 
+.cloak-menu{
+display:none;
+position:absolute;
+right:0;
+top:40px;
+background:#111;
+border:1px solid #333;
+border-radius:6px;
+padding:5px;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+z-index:999;
+}
+
+.cloak-menu button{
+display:block;
+width:100%;
+padding:8px 12px;
+text-align:left;
+background:none;
+border:none;
+color:white;
+cursor:pointer;
+}
+
+.cloak-menu button:hover{
+background:#222;
+}
 body{
 margin:0;
 font-family:"Oxanium",sans-serif;
@@ -302,7 +333,20 @@ Null_X Loader • Experiments and also bought and paid for by the Null_X organiz
 
 
 <script>
+const cloakBtn = document.getElementById("tabCloak");
+const cloakMenu = document.getElementById("cloakMenu");
 
+cloakBtn.onclick = function(e){
+e.stopPropagation();
+cloakMenu.style.display =
+cloakMenu.style.display === "block" ? "none" : "block";
+};
+
+document.addEventListener("click", function(e){
+  if (!cloakMenu.contains(e.target) && e.target !== cloakBtn){
+    cloakMenu.style.display = "none";
+  }
+});
 function launchBrowser(){
 document.getElementById("landing").style.display="none";
 document.getElementById("browser").style.display="flex";
@@ -324,6 +368,6 @@ document.getElementById("iframes").innerHTML=
 };
 
 </script>
-
+  <script src="index.js"></script>
 </body>
 </html>
