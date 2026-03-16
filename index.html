@@ -251,7 +251,18 @@ Null_X Loader • Experiments and also bought and paid for by the Null_X organiz
 <button id="open"><span class="material-icons">open_in_new</span></button>
 <button id="bookmark"><span class="material-icons">star_border</span></button>
 <button id="theme"><span class="material-icons">dark_mode</span></button>
-<button id="tabCloak"><span class="material-icons">visibility</span></button>
+<div class="cloak-wrapper">
+
+<button id="tabCloak" title="Tab Cloak">
+<span class="material-icons">visibility</span>
+</button>
+
+<div id="cloakMenu" class="cloak-menu">
+
+<button onclick="applyCloak('google')">Google</button>
+<button onclick="applyCloak('drive')">Google Drive</button>
+<button onclick="applyCloak('classroom')">Google Classroom</button>
+<button onclick="applyCloak('blank')">Blank</button>
 </div>
 
 </div>
