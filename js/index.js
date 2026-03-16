@@ -59,7 +59,7 @@ icon:""
 /* Apply cloak */
 /* ----------------------------- */
 
-function applyCloak(name){
+window.applyCloak = function(name){
 
 const cloak = cloaks[name];
 
