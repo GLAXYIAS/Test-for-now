@@ -333,20 +333,6 @@ Null_X Loader • Experiments and also bought and paid for by the Null_X organiz
 
 
 <script>
-const cloakBtn = document.getElementById("tabCloak");
-const cloakMenu = document.getElementById("cloakMenu");
-
-cloakBtn.onclick = function(e){
-e.stopPropagation();
-cloakMenu.style.display =
-cloakMenu.style.display === "block" ? "none" : "block";
-};
-
-document.addEventListener("click", function(e){
-  if (!cloakMenu.contains(e.target) && e.target !== cloakBtn){
-    cloakMenu.style.display = "none";
-  }
-});
 function launchBrowser(){
 document.getElementById("landing").style.display="none";
 document.getElementById("browser").style.display="flex";
