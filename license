@@ -1,0 +1,45 @@
+Got it — you want a custom, strongly worded license that prohibits anyone from copying, redistributing, or using your GitHub code, while still crediting JimmyQRG for some ideas and minor contributions. Here’s a detailed, legally styled version that reads like a restrictive, proprietary license (not unlike a “No License” statement but articulated fully).
+
+Custom Proprietary License – No Redistribution or Use Without Permission
+
+Copyright (c) 2026 Null_X
+
+This repository and all source code, documentation, and related materials (“the Software”) contained herein are the exclusive intellectual property of the copyright holder identified above (“the Owner”). This license governs any and all use, copying, modification, or distribution of the Software. By accessing or downloading any part of this repository, you agree to the following terms and conditions:
+
+1. Rights Granted
+No express or implied rights are granted. The Owner retains all rights not expressly stated in this document. You may not copy, modify, distribute, sublicense, publicly display, or make derivative works of the Software in whole or in part, in any medium, for any purpose, without explicit, written permission from the Owner.
+
+2. Restrictions
+You may not use any portion of the Software, including but not limited to source code, documentation, configuration files, or design concepts, in your own projects, whether personal, academic, corporate, or open-source.
+
+You may not redistribute, re-upload, or host any part of this repository or its contents elsewhere.
+
+You may not train machine learning models, or use the Software for data-mining or scraping for the purpose of imitation, reproduction, or code generation.
+
+You may not claim ownership of, or attribute authorship to, any portion of the Software or derivative work based on it.
+
+You may not use this Software in any way that suggests endorsement, partnership, or sponsorship by the Owner.
+
+3. Attribution and Acknowledgment
+Certain smaller pieces of code, snippets, or conceptual influences may be attributed to the independent developer JimmyQRG. The Owner acknowledges that some ideas and limited fragments of code were inspired by or derived from the work of JimmyQRG. However, such contributions do not constitute joint ownership or extend additional permissions to others regarding the Software.
+
+4. No Warranty
+The Software is provided “as-is,” with no warranties of any kind, express or implied. The Owner makes no guarantees regarding the accuracy, completeness, or performance of the Software. You assume all risks associated with use (authorized or unauthorized) and agree that the Owner shall not be liable for any damages arising from such use.
+
+5. Enforcement and Liability
+Unauthorized copying, modification, publication, or reuse of any element of this repository constitutes a violation of this license and may also constitute a violation of copyright law. The Owner reserves the right to pursue all remedies available under law—including but not limited to removal requests, takedown notices, and legal action—to protect the integrity and ownership of the Software.
+
+6. Intellectual Property Integrity
+The design, structure, organization, and logic of the Software are trade secrets of the Owner. Any attempt to reverse engineer, decompile, disassemble, or otherwise extract the underlying source or architecture of the Software without explicit permission will be considered a breach of this agreement and intellectual property theft.
+
+7. Termination
+This license is automatically terminated if you fail to comply with any of its terms. Upon termination, you must destroy all copies, modified or unmodified, of the Software and cease all related activity.
+
+8. Governing Law
+This license and all disputes arising from it shall be governed by and interpreted under the laws of the State of Georgia, United States, without regard to its conflict-of-law provisions. Venue for any legal proceedings shall be within the courts of Fulton County, Georgia.
+
+9. Changes to This License
+The Owner reserves the right to modify, update, or replace this license at any time. Updated versions will supersede all previous ones upon publication in this repository.
+
+10. Summary (Plain English)
+In short: You may look at the code, but you may not take from it, copy it, or reuse any part of it in any work of your own without explicit written permission. Credit is due to JimmyQRG for some ideas and small code fragments incorporated with acknowledgement, but that credit does not extend reuse permission to you or anyone else.
