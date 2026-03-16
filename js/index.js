@@ -10,9 +10,9 @@ if (cloakButton && cloakMenu) {
 cloakButton.onclick = () => {
 
 cloakMenu.style.display =
-cloakMenu.style.display === "flex"
+cloakMenu.style.display === "block"
 ? "none"
-: "flex";
+: "block";
 
 };
 
